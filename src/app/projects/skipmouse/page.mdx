@@ -1,0 +1,33 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import designSystem from './ogp-image.png'
+
+export const article = {
+  author: 'Naoto',
+  date: '2022-09-06',
+  title: 'SkipMouse',
+  description:
+    'SKipMouse',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+
+<Image src={designSystem} alt="" />
+
+## URL
+https://skipmouse.70to.dev/
+
+## GitHub
+https://github.com/70to/skipmouse_shortcuts/blob/main/README.md
+
+## Stack
+- Gridsome
+- TailwindCSS
+
+## Hosting
+- Netlify
