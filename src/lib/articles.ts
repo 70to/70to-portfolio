@@ -34,3 +34,27 @@ export async function getAllArticles() {
 
   return articles.sort((a, z) => +new Date(z.date) - +new Date(a.date))
 }
+
+async function importProject(
+  projectFilename: string,
+): Promise<ArticleWithSlug> {
+  let { article } = (await import(`../app/projects/${projectFilename}`)) as {
+    default: React.ComponentType
+    article: Article
+  }
+
+  return {
+    slug: projectFilename.replace(/(\/page)?\.mdx$/, ''),
+    ...article,
+  }
+}
+
+export async function getAllProjects() {
+  let projectFilenames = await glob('*/page.mdx', {
+    cwd: './src/app/projects',
+  })
+
+  let projects = await Promise.all(projectFilenames.map(importProject))
+
+  return projects.sort((a, z) => +new Date(z.date) - +new Date(a.date))
+}

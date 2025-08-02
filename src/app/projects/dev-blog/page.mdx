@@ -1,0 +1,31 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import designSystem from './ogp_image.png'
+
+export const article = {
+  author: 'Naoto',
+  date: '2022-09-05',
+  title: 'Dev Blog',
+  description:
+    'Dev Blog',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+
+<Image src={designSystem} alt="" />
+
+## URL
+https://blog.70to.dev/
+
+## Stack
+- Gridsome
+- TailwindCSS
+
+## Hosting
+- Netlify

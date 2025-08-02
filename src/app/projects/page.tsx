@@ -2,14 +2,14 @@ import { type Metadata } from 'next'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
+import { type ArticleWithSlug, getAllProjects } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
     <Card as="li">
       <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
-        <Card.Link href={`/articles/${article.slug}`}>{article.title}</Card.Link>
+        <Card.Link href={`/projects/${article.slug}`}>{article.title}</Card.Link>
       </h2>
       <Card.Description>{article.description}</Card.Description>
       <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 }
 
 export default async function ArticlesIndex() {
-  let articles = await getAllArticles()
+  let articles = await getAllProjects()
 
   return (
     <SimpleLayout

@@ -1,0 +1,36 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import designSystem from './ogp_image.png'
+
+export const article = {
+  author: 'Naoto',
+  date: '2022-11-23',
+  title: 'HitAndBlow',
+  description:
+    'HitAndBlow',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+
+<Image src={designSystem} alt="" />
+
+## URL
+https://hit-and-blow.70to.dev
+
+## Github
+https://github.com/70to/HitAndBlow
+
+## Stack
+- Next.js
+- React Hooks
+- Typescript
+- TailwindCSS
+
+## Hosting
+- Vercel

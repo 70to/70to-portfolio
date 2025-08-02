@@ -1,0 +1,35 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import designSystem from './ogp_image.png'
+
+export const article = {
+  author: 'Naoto',
+  date: '2022-09-05',
+  title: 'GeoQuiz',
+  description:
+    'GeoQuiz',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+
+<Image src={designSystem} alt="" />
+
+## URL
+https://geoguessr-quiz.70to.dev/
+
+## GitHub
+https://github.com/70to/geoguessr_quiz
+
+## Stack
+- React.js
+- React Hooks
+- TailwindCSS
+
+## Hosting
+- Vercel
