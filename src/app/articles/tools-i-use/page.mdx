@@ -1,0 +1,71 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+    author: 'Naoto',
+    date: '2020-04-19',
+    title: '開発時に使用しているツール',
+    description:
+        '開発時に使用しているツール一覧です。',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## PhpStorm
+エディタは言わずとしれたInteliJを使っています。  
+有償ですがエンジニアであれば確実にペイできるので損はないと思います。
+投資回収率は850%らしいです。    
+https://www.jetbrains.com/ja-jp/lp/idea-forrester-tei/
+
+## Terminal
+ターミナルはMac標準でzshとoh-my-zshの組み合わせで使っています。
+
+## TablePlus
+データベースマネジメントツールです。
+できる限りGUIで操作したということも購入しましたが、あまり使う機会がなく後悔しています..
+
+## MySQLWorkbench
+同じくデータベースマネジメントツールですが、こちらはMysql公式が出しておりさらに無料なのでおすすめです。
+
+## Alfred
+効率化アプリとしては定番のランチャーアプリです。  
+Clipboardの機能はとても便利で過去にコピペしたテキストを3ヶ月間参照することができます。  
+まだ使いこなせていないので時間がある時にちょくちょく調べていきたいと思っています。
+
+## TickTick
+いままでいろいろなアプリを試してきましたが、ここまでよくできているアプリは初めてというくらいすばらしいTodoアプリです。  
+すべてのデバイス(Web、スマホ、デスクトップ、ブラウザ拡張機能)に対応しており、リアルタイム同期です。
+
+~~## Bitwarden
+オープンソースのパスワードマネージャーです。1Passwordの下位互換ですが、無料で使いたい方はこちらのBitwardenがおすすめです。~~
+## 1Password
+パスワード管理は現代においてとても重要なので...
+
+## HyperSwitch
+Macにはショートカットでアプリを切り替えることができる「Command + Tab」がありますが、アプリ内で画面を切り替えたいときそのような機能がありません。  
+それを解決してくれます。
+
+## Bear
+マークダウン式のメモアプリです。いろいろなマークダウン式のメモアプリを試しましたがこれが一番使いやすいかと思います。
+主にこちらはプライベートで使っています。
+
+~~## JustFocus
+ポモドーロテクニック専用のアプリです。  
+特に気に入っているのがタイマーが終了すると休憩時間中に名言が表示されるところです。やる気がUpします。~~
+→ 現在ではTickTickにタイマーが付属されているのでそれを使用しています。
+
+## BetterSnapTool
+ショートカットを使ってウィンドウサイズを分割できます。Windowsには標準でこの機能があるのですがなぜMacにはありません。。
+
+## PostMan
+APIテストをする時の定番ツールです。
+
+## draw.io
+ER図やフローチャートを作成する時に使用します。オープンソースというところもいいです:)
+
+
+

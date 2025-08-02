@@ -1,0 +1,47 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+    author: 'Naoto',
+    date: '2024-08-16',
+    title: 'Laravel Auth::user()がSSRでnullになる問題と対処法',
+    description:
+        'Next.jsとLaravelを組み合わせたプロジェクトにおいて、サーバーサイドレンダリング（SSR）時にAuth::user()がnullになってしまう問題とその対処法について解説します。',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## 問題
+CSRの場合は、Auth::user()が正常に取得できるが、SSRの場合はnullになってしまう。
+
+## 原因
+SSRの場合、Cookieが送信されないため、セッション情報が取得できない。
+
+## 対応
+SSRの場合は、headersにCookieを設定することで、セッション情報を取得できる。
+
+```c
+export async function getServerSideProps({req}: GetServerSidePropsContext) {
+    const cookies = req.headers.cookie;
+
+    const categories = await axios.get('/api/categories', {
+        headers: {
+            origin: `${process.env.NEXT_PUBLIC_FRONTEND_URL}`,
+            Cookie: cookies,
+        }
+    });
+
+    return {
+        props: {
+            categories: categories.data,
+        }
+    };
+}
+```
+
+## 参考
+https://laracasts.com/discuss/channels/laravel/laravel-sanctum-breeze-with-next-js
