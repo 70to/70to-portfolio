@@ -1,0 +1,37 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import designSystem from './image.jpg'
+
+export const article = {
+  author: 'Naoto',
+  date: '2020-02-05',
+  title: 'Stless',
+  description:
+    'Stless',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+
+<Image src={designSystem} alt="" />
+
+## About
+- 認知行動療法
+- 運動療法
+- 暴露療法
+
+で人生をより良くするアプリ
+
+Stress + Less = Stless
+
+## URL
+Closed
+
+## Stack
+- Laravel
+- Vue.js
