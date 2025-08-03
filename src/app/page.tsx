@@ -24,7 +24,7 @@ function Article({ article }: { article: ArticleWithSlug }) {
       <Card.Description>{article.description}</Card.Description>
       <Card.Link
         href={`/projects/${article.slug}`}
-        className="relative z-10 mt-6 flex items-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200"
+        className="relative z-10 mt-6 flex items-center text-sm font-medium transition text-teal-500 group-hover:text-teal-500 dark:text-zinc-200"
       >
         {/* <ArrowIcon className="h-4 w-4 mr-2 flex-shrink-0" /> */}
         <span>View Detail</span>
