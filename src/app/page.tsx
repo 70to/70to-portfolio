@@ -24,7 +24,7 @@ function Article({ article }: { article: ArticleWithSlug }) {
 }
 
 export const metadata: Metadata = {
-  title: 'Naoto Yamada - Developer & Creator',
+  title: 'Naoto - Developer & Creator',
   description:
     'I enjoy personal development and have built many apps. I would like to introduce some of them.',
 }
