@@ -1,0 +1,38 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import designSystem from './thumbnail.png'
+
+export const article = {
+  author: 'Naoto',
+  date: '2025-07-05',
+  title: 'Hanabi Typing',
+  description:
+    'Hanabi Typing',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+
+<Image src={designSystem} alt="" />
+
+## About
+タイピングをしながら花火を楽しむことができ、１分間にどれだけの花火（スコア）を打ち上げることができるか挑戦するタイピングゲームです。
+
+正確なタイプをするごとに花火メーター上がっていきます。花火メーターが上がれば上がるほど、一回のタイプで打ち上がる花火の数が増えます。
+一方で、ミスをすると花火メーターが下がります。高得点をとるには、ミスをできるだけ少なくして早くタイプすることが重要です。
+
+## URL
+https://jp-hanabi-typing-git-main-70tos-projects.vercel.app/
+
+## Stack
+- Next.js
+- Shadcn
+- TailwindCSS
+
+## Hosting
+- Vercel
