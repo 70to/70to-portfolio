@@ -11,7 +11,7 @@ function Article({ article }: { article: ArticleWithSlug }) {
       <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
         <Card.Link href={`/projects/${article.slug}`}>{article.title}</Card.Link>
       </h2>
-      <Card.Description>{article.description}</Card.Description>
+      {/* <Card.Description>{article.description}</Card.Description> */}
       <Card.Link
         href={`/projects/${article.slug}`}
         className="relative z-10 mt-6 flex items-center text-sm font-medium transition text-teal-500 group-hover:text-teal-500 dark:text-zinc-200"
